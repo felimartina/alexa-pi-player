@@ -1,0 +1,16 @@
+{
+  "name": "alexa-pi-player-lambda",
+  "version": "1.0.0",
+  "description": "Lambda handler for Alexa Pi Player skill",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "author": "Pipe Martina",
+  "license": "ISC",
+  "dependencies": {
+    "alexa-sdk": "^1.0.14",
+    "npm": "^5.4.1",
+    "request": "^2.81.0"
+  }
+}

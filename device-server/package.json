@@ -1,0 +1,23 @@
+{
+  "name": "local-player",
+  "version": "1.0.0",
+  "description": "This server plays a Serie's episode or movie locally.",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "npm install",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "swagger"
+  ],
+  "license": "Unlicense",
+  "private": true,
+  "dependencies": {
+    "connect": "^3.2.0",
+    "googleapis": "^21.3.0",
+    "js-yaml": "^3.3.0",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.1",
+    "swagger-tools": "0.10.1"
+  }
+}

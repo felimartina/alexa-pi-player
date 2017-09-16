@@ -1,0 +1,79 @@
+---
+swagger: "2.0"
+info:
+  description: "This server plays a Serie's episode or movie locally."
+  version: "1.0.0"
+  title: "Local Player"
+  contact:
+    email: "felimartina@outlook.com"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+host: "localhost"
+basePath: "/v2"
+tags:
+- name: "web"
+  description: "Web player"
+schemes:
+- "http"
+paths:
+  /web:
+    post:
+      tags:
+      - "web"
+      summary: "Web Player"
+      description: "Plays a Serie's episode or Movie using web browser (chrome)"
+      operationId: "web"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Information about the serie or movie that needs to be played"
+        required: true
+        schema:
+          $ref: "#/definitions/body"
+      responses:
+        404:
+          description: "Serie or Movie not found"
+        405:
+          description: "Invalid input"
+        500:
+          description: "There was an error trying to play the requested Serie or Movie"
+      x-swagger-router-controller: "Web"
+securityDefinitions:
+  api_key:
+    type: "apiKey"
+    name: "apiKey"
+    in: "header"
+definitions:
+  PlayRequest:
+    type: "object"
+    required:
+    - "name"
+    properties:
+      name:
+        type: "string"
+        example: "Game of Thrones"
+      season:
+        type: "integer"
+        example: 1
+      episode:
+        type: "integer"
+        example: 1
+  body:
+    type: "object"
+    required:
+    - "name"
+    properties:
+      name:
+        type: "string"
+        example: "Game of Thrones"
+      season:
+        type: "integer"
+        example: 1
+      episode:
+        type: "integer"
+        example: 1

@@ -1,0 +1,15 @@
+{
+  "name": "device-player",
+  "version": "1.0.0",
+  "description": "IoT device that connects to AWS IoT platform and can play/stop upon Alexa Skill invokation",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-iot-device-sdk": "^2.0.1"
+  }
+}
